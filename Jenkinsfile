@@ -17,7 +17,7 @@ pipeline {
         DEBFULLNAME = "${params.DEBFULLNAME}"
         DEBEMAIL = "${params.DEBEMAIL}"
         BRANCH = "${params.BRANCH}"
-        DEB_CONFIGURE_OPTS = "${params.DEB_CONFIGURE_OPTS}${BUILD_TESTS_ENABLED ? "" : "--disable-tests --enable-extra-checks"}"
+        DEB_CONFIGURE_OPTS = "${params.DEB_CONFIGURE_OPTS}${BUILD_TESTS_ENABLED ? "" : " --disable-tests"}"
         DEB_CXXFLAGS_SET = "${params.DEB_CXXFLAGS_SET}"
         DEB_CFLAGS_SET = "${params.DEB_CFLAGS_SET}"
         REPO_URL = "${params.REPO_URL}"
